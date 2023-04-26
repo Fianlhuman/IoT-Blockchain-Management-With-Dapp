@@ -23,6 +23,7 @@ This project is based on the Example project MetaMask/test-dapp [here](https://g
 - ethereumjs-util(JavaScript library for ethereum (DApp) development)
 - webpack(Static Module Packaging Tool)
 - ethers.ts(TypeScript library for ethereum (DApp) development)
+- Bootstrap(Open source front-end framework for rapid development of responsive, mobile-first websites and web applications)
 ## Installation
 
 1. Install nvm using the instructions found [here](https://github.com/nvm-sh/nvm#installing-and-updating).
