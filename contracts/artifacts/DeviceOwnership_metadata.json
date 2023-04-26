@@ -1,0 +1,406 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_approved",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "NewDevice",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_balance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "createDevice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "deviceToOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "devices",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "deviceAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getPublicKey",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerToDevices",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_publicKey",
+						"type": "string"
+					}
+				],
+				"name": "setPublicKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "takeOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_deviceAddress",
+						"type": "address"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "TODO: 把这里变成 natspec 标准的注释把",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"DeviceOwnership.sol": "DeviceOwnership"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Context.sol": {
+			"keccak256": "0x2c36c9489879b7c91cdd73bbe8b2584f401aa26f4f252c04f053e824d6ca75c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ef20575fc12fd27f252acd28a8d0f65893832f29fd9c82f7ec165121af4572f",
+				"dweb:/ipfs/QmZMCoWWDTjhs1CNFMWv4JNWVyyeuzyqteCHhF4heCUYJJ"
+			]
+		},
+		"DeviceFactory.sol": {
+			"keccak256": "0x574e20ee41acb7c608fc567b05c3bc7221601287d1305c416a19bedc1b823e82",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://320966cd6296277fd05c5eb9cdc623fdd3ca39585f4566449b4e25fad3854118",
+				"dweb:/ipfs/QmUcjLP7ankR8qnMqnVgie42CLDZKj3kSAfovidhe5VncF"
+			]
+		},
+		"DeviceOwnership.sol": {
+			"keccak256": "0x7bbf7c7368e2fec7269e01344c7d46e742b8b83ae6ec86aed314d42b615aa483",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce0a4da4bba14781f3a4ff9d0e5abd453b49db8346642bc3816feedb8220c513",
+				"dweb:/ipfs/QmU74JqzNCJHfzS9HjgTurD5mxYc8C1dMpo8C7yjjBeoPB"
+			]
+		},
+		"Ownable.sol": {
+			"keccak256": "0x2a0dcc46438f9c7e53afa4c727a6763ea6f032622a4c2c76a5fc307edd082787",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://36f25be0730e0d09825b0d989352bb8cd003f0fd3680594265fc980fc24409b0",
+				"dweb:/ipfs/Qmf93VF9k7YHnSn1ti2FvnacJnvaTLzooQVG4csSfhmS9E"
+			]
+		},
+		"SafeMath.sol": {
+			"keccak256": "0x9ea9ed8355940fc0c1cec0f9a75b1cb108d7092cbb888ab0a5974a3280022dfc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://83e718c16af82ff4ff615290bcd767c2e39b744d394d50c535a786c7ae61bf83",
+				"dweb:/ipfs/QmSu6XngtujDLWtwpxp9ev43d3yW7cDwYKBpJPeMvUvjQf"
+			]
+		},
+		"erc721.sol": {
+			"keccak256": "0xb1c06c01dc8aa8543fd18930d49c15dd28495c9831d89312d54a5234e2c7349f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a3774380641f29050c9eeb5be0a2010246ac6e990c8ad19eda235a11cf01bc5c",
+				"dweb:/ipfs/QmV2bQHiys192fKHc4PXUphzdMhZkYeYLKZEjReZrEWzCg"
+			]
+		}
+	},
+	"version": 1
+}
